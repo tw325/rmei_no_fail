@@ -48,6 +48,21 @@ class character1{
 			return "He can continue fighting!";
 		}
 	}
+	//TRY THESE METHODS
+	 
+	public void setHealth(int h){
+		health = h;
+	}
+	public void attack(character1 c1){
+		int thisATK = atk;
+		int c1Health = c1.getHealth();
+		int c1DEF = c1.getDef();
+		c1.setHealth(c1Health-(thisATK - c1DEF));
+		if (c1.getHealth() <=0){
+			System.out.println("He is killed");
+		}
+	}
+	
 	// ======================================== MAIN METHOD ================================================
 	public static void main(String[] args){
 		character1 Warrior = new character1(10,5,5);
