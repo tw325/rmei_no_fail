@@ -50,15 +50,15 @@ class character1{
 	}
 	//TRY THESE METHODS
 	 
-	public void setHealth(int h){
-		health = h;
+	public void setHp(int h){
+		hp = h;
 	}
 	public void attack(character1 c1){
 		int thisATK = atk;
-		int c1Health = c1.getHealth();
+		int c1HP = c1.getHp();
 		int c1DEF = c1.getDef();
-		c1.setHealth(c1Health-(thisATK - c1DEF));
-		if (c1.getHealth() <=0){
+		c1.setHp(c1HP-(thisATK - c1DEF));
+		if (c1.getHp() <=0){
 			System.out.println("He is killed");
 		}
 	}
@@ -100,6 +100,12 @@ class character1{
 		System.out.println(Rouge.actionAttackedbyRouge());
 		// The sad aftermath of fighting the rouge
 		System.out.println(Rouge.keepFighting(Rouge.actionAttackedbyRouge()));
+
+		//SEE HOW THE ATTACK METHOD WORKS
+		character1 Warrior2 = new character1(8,8,8);
+		Warrior2.attack(Warrior);
+		System.out.println(Warrior.getHp());
+
 	}
 
 }
