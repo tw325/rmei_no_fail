@@ -367,6 +367,7 @@ public class GameBoard{
 		    }	
 		}
 	    }
+	    System.out.println("smdbicboi");
 	}
 	return false;
     }
