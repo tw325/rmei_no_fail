@@ -4,7 +4,6 @@ class arrEys {
 		int count = 0;
 		while (count < 100) {
 			array1[count] = count;
-			System.out.println(array1[0]);
 			System.out.println(array1[count]);
 			count = count + 1;
 
